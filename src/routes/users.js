@@ -45,8 +45,8 @@ router.post('/updateUser', (req, res)=>{
             email: req.body.email,
             password: req.body.password
         })
-        .then((data)=>{res.redirect('/usuarios')}) // si es correcto, renderiza al catalogo de usuarios
-        .catch((error)=>{res.json({message:error})}); // si no es correcto, arroja un mensaje de error
+        .then((data)=>{res.redirect('/usuarios')}) // Si es correcto: renderiza al catalogo de usuarios
+        .catch((error)=>{res.json({message:error})}); // Si no es correcto: arroja un mensaje de error
 });
 
 module.exports = router; //Se exporta el routeador
